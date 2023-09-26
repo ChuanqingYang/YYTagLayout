@@ -9,6 +9,14 @@ public struct YYTagLayout: Layout {
     public var horizontalSpacing: CGFloat = 10
     public var verticalSpacing: CGFloat = 10
     
+    public init(alignment: Alignment = .center,
+                horizontalSpacing: CGFloat = 10,
+                verticalSpacing: CGFloat = 10) {
+        self.alignment = alignment
+        self.horizontalSpacing = horizontalSpacing
+        self.verticalSpacing = verticalSpacing
+    }
+    
     
     public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
         let maxWidth = proposal.width ?? 0
